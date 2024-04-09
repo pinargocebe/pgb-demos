@@ -1,0 +1,14 @@
+packages.zip
+.vscode
+.pytest_cache
+venv
+tmp
+.terraform
+.terraform*
+terraform.tfstate
+terraform.tfstate.*
+.env
+*zip
+__pycache__
+.coverage
+.mypy_cache
