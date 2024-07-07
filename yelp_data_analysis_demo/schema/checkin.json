@@ -1,0 +1,17 @@
+{
+    "fields": [
+        {
+            "metadata": {},
+            "name": "business_id",
+            "nullable": true,
+            "type": "string"
+        },
+        {
+            "metadata": {},
+            "name": "date",
+            "nullable": true,
+            "type": "string"
+        }
+    ],
+    "type": "struct"
+}
