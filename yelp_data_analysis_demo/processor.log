@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/pinar/Desktop/work/vs_code_projects/pgb-demos/yelp_data_analysis_demo/app/data_processor.py", line 14, in <module>
+    from app.exception import DataProcessingFailure
+ModuleNotFoundError: No module named 'app'
+24/07/08 21:43:26 INFO ShutdownHookManager: Shutdown hook called
+24/07/08 21:43:26 INFO ShutdownHookManager: Deleting directory /private/var/folders/s_/9qnkwbw96x58kqzk9486w_fc0000gn/T/spark-5813b075-34ce-43db-8781-222372da331f

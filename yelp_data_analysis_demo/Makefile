@@ -1,7 +1,7 @@
 SHELL := /bin/bash # Use bash syntax
 
 install_dev:
-	pip install -r requirements/dev.txt
+	pip install -r requirements.txt
 
 format_code:
 	isort app tests
