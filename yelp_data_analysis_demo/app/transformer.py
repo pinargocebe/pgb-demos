@@ -7,9 +7,10 @@ from abc import ABC, abstractmethod
 
 import pyspark.sql.functions as F
 from delta import DeltaTable
-from exception import UnsupportedEntityException
 from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql.types import ArrayType, StringType
+
+from app.exception import UnsupportedEntityException
 
 
 class Transformer(ABC):

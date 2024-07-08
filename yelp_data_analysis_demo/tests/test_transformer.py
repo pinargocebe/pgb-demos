@@ -1,10 +1,14 @@
+import pytest
+
+from app.exception import UnsupportedEntityException
+from app.transformer import TransformerFactory
+
+
 def test_get_unimplemented_transformer():
-    pass
+    with pytest.raises(UnsupportedEntityException) as exc:
+        TransformerFactory.get_transformer("unimplemented_entity")
 
-def test_transform_business():
-    pass
+    assert str(exc.value) == "Implement transformer for entity: 'unimplemented_entity'"
 
-def test_transform_business_null_data():
-    pass
 
 # TODO add other tests

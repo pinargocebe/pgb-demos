@@ -5,8 +5,9 @@ Main script to read and convert schema files to spark schema.
 import json
 import os
 
-from exception import UnsupportedEntityException
 from pyspark.sql.types import StructType
+
+from app.exception import UnsupportedEntityException
 
 
 class SchemaFactory:  # pylint: disable=too-few-public-methods

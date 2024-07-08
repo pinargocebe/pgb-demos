@@ -9,11 +9,12 @@ from datetime import datetime
 import pyspark.sql.functions as F
 from delta import DeltaTable, configure_spark_with_delta_pip
 from dotenv import load_dotenv
-from logger import LoggerProvider
 from pyspark.sql import SparkSession, Window
-from transformer import TransformerFactory
 
-from schema import SchemaFactory
+from app.exception import DataProcessingFailure
+from app.logger import LoggerProvider
+from app.schema import SchemaFactory
+from app.transformer import TransformerFactory
 
 
 class DataProcessor(LoggerProvider):
@@ -68,7 +69,8 @@ class DataProcessor(LoggerProvider):
             self.agg_number_of_checkins()
             self.logger.debug("Prepared aggregations.")
         except Exception as e:  # pylint: disable=broad-exception-caught
-            self.logger.error("Failed to process data: ", e)
+            self.logger.error("Failed to process data: %s" % e)
+            raise DataProcessingFailure("Failed to process data: ") from e
 
     def agg_number_of_checkins(self):
         """Prepares aggregation to find number of checkins of a business compared to overall star rating.
