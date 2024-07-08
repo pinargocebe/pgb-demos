@@ -119,11 +119,23 @@ In order to process the data efficiently and organize it logically by improving 
 ### Bronze layer
 In this layer data stored as it is and parquet format has been used to efficiently store the raw data. Incoming raw data stored into the year=YYYY/month=MM/day=DD by using the processing date in order to historically store the data.
 
+![alt text](images/bronze.png)
+
 ### Silver layer
 The silver layer comprises validated data, prepared for further analysis. Delta format has been used to prepare the latest snapshot of the data for further anlysis. Data for the each entity have been validated against the defined schema, dropped the duplicate data, and type conversion has been done if necessary. Also compaction and z-ordering have been done to improve query performance.
 
+![alt text](images/silver.png)
+
 ### Gold layer
 Gold layer contains the aggreagated data. Data from the Silver layer is transformed into high-value data products with a structure that are ready to use by business users for reporting purposes. Delta format has been used to efficiently store tha data in this layer.
+
+**Starts per business on weekly basis**
+
+![alt text](images/weekly_stars_per_business.png)
+
+**Number of checkins per business compared to overall stars rating**
+
+![alt text](images/number_of_chekins_vs_stars_per_business.png)
 
 ### Application scripts
 - **data_processor.py**: This python script is the main entrpoint for the application and responsible to run all the workflow in order to prepare bronze, silver and gold layers.
