@@ -1,3 +1,0 @@
-/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/pinar/Desktop/work/vs_code_projects/pgb-demos/yelp_data_analysis_demo/docker/app/data_processor.py': [Errno 2] No such file or directory
-24/07/08 21:39:36 INFO ShutdownHookManager: Shutdown hook called
-24/07/08 21:39:36 INFO ShutdownHookManager: Deleting directory /private/var/folders/s_/9qnkwbw96x58kqzk9486w_fc0000gn/T/spark-9109b83b-9a51-4804-acff-d3585720a878
